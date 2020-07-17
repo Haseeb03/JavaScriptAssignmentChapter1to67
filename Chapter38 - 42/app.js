@@ -54,13 +54,62 @@ function TriangleArea() {
     document.getElementById("areaResult").innerHTML ="Area of triangle: " + area ;
 }
 function CalculateS(a,b,c) {
-    var s = (a+b+c) / 2;
+    var s = (a+b+c) / 2;    
     return s;
 }
 
+
 document.write("<h3>Question4</h3>");
+document.write("<p>Calculate Average and Percentage of three Subjects</p>");
+document.write("<p>Subject1: <input id = 'sub1'/></p>");
+document.write("<p>Subject2: <input id = 'sub2'/></p>");
+document.write("<p>Subject3: <input id = 'sub3'/></p>");
+document.write("<button type='submit' onclick='Main()'>Calculate</button>");
+document.write("<p id='averageResult'></p>");
+document.write("<p id='percentageResult'></p>");
+function Main() {
+    var sub1 = Number(document.getElementById("sub1").value);
+    var sub2 = Number(document.getElementById("sub2").value);
+    var sub3 = Number(document.getElementById("sub3").value);
+    var avg = average(sub1 ,sub2 ,sub3);
+    var percent = percentage(sub1, sub2, sub3);
+    document.getElementById("averageResult").innerHTML ="Average: " + avg ;
+    document.getElementById("percentageResult").innerHTML ="Percentage: " + percent +"%";
+}
+function average(sub1, sub2, sub3) {
+    var average = (sub1 + sub2 + sub3) / 3;
+    console.log(average);
+    return average;
+}
+function percentage(sub1, sub2, sub3) {
+    var percentage = (sub1 + sub2 + sub3) * 100 / 300;
+    return percentage;
+}
+
 
 document.write("<h3>Question5</h3>");
+document.write("<p>Create indexOf() function</p>");
+document.write("<p>Write a sentence: <input id = 'sentence'/></p>");
+document.write("<p>Write a word to be found: <input id = 'word'/></p>");
+var strng = document.getElementById("sentence").value;
+var findStrng = document.getElementById("word").value;
+document.write("<button type='submit' onclick='indexOf()'>Find</button>");
+document.write("<p id='indexOfResult'></p>");
+function indexOf() {
+    for (var i = 0; i < strng.length; i++) {
+        for (var j = 0; j < findStrng.length; j++) {
+            if (strng[i + j] !== findStrng[j]) {
+                break;
+            }
+            if (j === findStrng.length - 1) {
+                return i;
+            }
+        }
+    }
+     return -1;
+ }
+ document.getElementById("indexOfResult").innerHTML = findStrng + " found at index " + indexOf() + " in this sentence: " +strng;
+
 
 document.write("<h3>Question6</h3>");
 
