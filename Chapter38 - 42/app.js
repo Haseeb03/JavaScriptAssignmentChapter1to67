@@ -116,7 +116,20 @@ function result(){
 
 
 document.write("<h3>Question6</h3>");
-
+document.write("<p>Remove Vowels</p>");
+document.write("<p>Write a sentence to remove Vowels: <input id = 'removevowels'/></p>");
+document.write("<button type='submit' onclick='removeVowels()'>Find</button>");
+document.write("<p id='WithoutVowels'></p>");
+var str;
+function removeVowels() {
+    str = document.getElementById("removevowels").value;
+    if(str.length <= 25) {
+        document.getElementById("WithoutVowels").innerHTML ="Remove Vowels: " + str.replace(/[aeiou]/gi, '');
+    }
+    else{
+        document.getElementById("WithoutVowels").innerHTML ="length is greater than 25 words";
+    }	
+}
 
 
 document.write("<h3>Question7</h3>");
