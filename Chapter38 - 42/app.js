@@ -286,7 +286,18 @@ function centimeter(cm){
 
 
 document.write("<h3>Question9</h3>");
-
-
+document.write("<p>Calculate Overtime pay of employee</p>");
+document.write("<p>Enter working hours of employees: <input id = 'totalhours'/></p>");
+document.write("<button type='submnit' onclick='overtime()'>Calculate</button>");
+document.write("<p id='overt'></p>");
+var OverTimePay;
+function overtime(){
+    var totalhours=document.getElementById("totalhours").value;
+    if(totalhours>40){
+        var ot=(document.getElementById("totalhours").value)-40;
+        OverTimePay=ot*12;
+    }
+    document.getElementById("overt").innerHTML = "Overtime pay of employee is: " + OverTimePay;
+}
 
 document.write("<h3>Question10</h3>");
