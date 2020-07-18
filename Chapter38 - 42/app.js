@@ -91,11 +91,12 @@ document.write("<h3>Question5</h3>");
 document.write("<p>Create indexOf() function</p>");
 document.write("<p>Write a sentence: <input id = 'sentence'/></p>");
 document.write("<p>Write a word to be found: <input id = 'word'/></p>");
-var strng = document.getElementById("sentence").value;
-var findStrng = document.getElementById("word").value;
-document.write("<button type='submit' onclick='indexOf()'>Find</button>");
+document.write("<button type='submit' onclick='result()'>Find</button>");
 document.write("<p id='indexOfResult'></p>");
-function indexOf() {
+var strng,findStrng;
+function IndexOf() {
+    strng = document.getElementById("sentence").value;
+    findStrng = document.getElementById("word").value;
     for (var i = 0; i < strng.length; i++) {
         for (var j = 0; j < findStrng.length; j++) {
             if (strng[i + j] !== findStrng[j]) {
@@ -106,12 +107,17 @@ function indexOf() {
             }
         }
     }
-     return -1;
- }
- document.getElementById("indexOfResult").innerHTML = findStrng + " found at index " + indexOf() + " in this sentence: " +strng;
+    return -1;
+}
+function result(){
+    var indexOfAnswer=IndexOf();
+    document.getElementById("indexOfResult").innerHTML = findStrng + " found at index " + indexOfAnswer + " in this sentence: " +strng;
+}
 
 
 document.write("<h3>Question6</h3>");
+
+
 
 document.write("<h3>Question7</h3>");
 
