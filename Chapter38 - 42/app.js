@@ -2,8 +2,8 @@ document.write("<h3>Question1</h3>");
 document.write("<p>Calculate Power</p>");
 document.write("<input id='base' placeholder='Base value'>");
 document.write("<input id='power' placeholder='Exponent value'>");
-document.write("<button type='submit' onclick='CalculatePower()'>Calculate</button>");
 document.write("<p id='result'></p>");
+document.write("<button type='submit' onclick='CalculatePower()'>Calculate</button>");
 function CalculatePower() {
     var b = document.getElementById("base").value;
     var p = document.getElementById("power").value;
@@ -25,8 +25,8 @@ function Power(b, p) {
 document.write("<h3>Question2</h3>");
 document.write("<p>Check Leap Year</p>");
 document.write("<input id = 'year'/>");
-document.write("<button type='submit' onclick='CheckLeapYear()'>Check</button>");
 document.write("<p id='leapResult'></p>");
+document.write("<button type='submit' onclick='CheckLeapYear()'>Check</button>");
 function CheckLeapYear() {
     var year = document.getElementById("year").value;
     if((year % 100 === 0) ? (year % 400 === 0) : (year % 4 === 0)){
@@ -43,8 +43,8 @@ document.write("<p>Calculate Area of Triangle</p>");
 document.write("<p>a: <input id = 'a'/></p>");
 document.write("<p>b: <input id = 'b'/></p>");
 document.write("<p>c: <input id = 'c'/></p>");
-document.write("<button type='submit' onclick='TriangleArea()'>Calculate Area</button>");
 document.write("<p id='areaResult'></p>");
+document.write("<button type='submit' onclick='TriangleArea()'>Calculate Area</button>");
 function TriangleArea() {
     var a = Number(document.getElementById("a").value);
     var b = Number(document.getElementById("b").value);
@@ -64,9 +64,9 @@ document.write("<p>Calculate Average and Percentage of three Subjects</p>");
 document.write("<p>Subject1: <input id = 'sub1'/></p>");
 document.write("<p>Subject2: <input id = 'sub2'/></p>");
 document.write("<p>Subject3: <input id = 'sub3'/></p>");
-document.write("<button type='submit' onclick='Main()'>Calculate</button>");
 document.write("<p id='averageResult'></p>");
 document.write("<p id='percentageResult'></p>");
+document.write("<button type='submit' onclick='Main()'>Calculate Average & Percentage</button>");
 function Main() {
     var sub1 = Number(document.getElementById("sub1").value);
     var sub2 = Number(document.getElementById("sub2").value);
@@ -91,8 +91,8 @@ document.write("<h3>Question5</h3>");
 document.write("<p>Create indexOf() function</p>");
 document.write("<p>Write a sentence: <input id = 'sentence'/></p>");
 document.write("<p>Write a word to be found: <input id = 'word'/></p>");
-document.write("<button type='submit' onclick='result()'>Find</button>");
 document.write("<p id='indexOfResult'></p>");
+document.write("<button type='submit' onclick='result()'>Find</button>");
 var strng,findStrng;
 function IndexOf() {
     strng = document.getElementById("sentence").value;
@@ -118,8 +118,8 @@ function result(){
 document.write("<h3>Question6</h3>");
 document.write("<p>Remove Vowels</p>");
 document.write("<p>Write a sentence to remove Vowels: <input id = 'removevowels'/></p>");
-document.write("<button type='submit' onclick='removeVowels()'>Find</button>");
 document.write("<p id='WithoutVowels'></p>");
+document.write("<button type='submit' onclick='removeVowels()'>Remove</button>");
 var str;
 function removeVowels() {
     str = document.getElementById("removevowels").value;
@@ -135,8 +135,8 @@ function removeVowels() {
 document.write("<h3>Question7</h3>");
 document.write("<p>count number of occurences of any two vowels</p>");
 document.write("<p>Write a sentence to count number of occurences of any two vowels: <input id = 'countvowels'/></p>");
-document.write("<button type='submit' onclick='Occurrences()'>Find</button>");
 document.write("<p id='TwoVowels'></p>");
+document.write("<button type='submit' onclick='Occurrences()'>Count</button>");
 var count;
 var vowels=[];
 function Occurrences() {
@@ -254,11 +254,11 @@ function Occurrences() {
 document.write("<h3>Question8</h3>");
 document.write("<p>Convert km distance in  meters, feet, inches and centimeters</p>");
 document.write("<p>Enter distance in km: <input id = 'distance'/></p>");
-document.write("<button type='submit' onclick='mainfunction()'>Find</button>");
 document.write("<p id='m'></p>");
 document.write("<p id='f'></p>");
 document.write("<p id='i'></p>");
 document.write("<p id='cm'></p>");
+document.write("<button type='submit' onclick='mainfunction()'>Convert</button>");
 function mainfunction(){
     var distance = document.getElementById("distance").value;
     document.getElementById("m").innerHTML = distance + "km = " + meter(distance) + " meters";
@@ -288,8 +288,8 @@ function centimeter(cm){
 document.write("<h3>Question9</h3>");
 document.write("<p>Calculate Overtime pay of employee</p>");
 document.write("<p>Enter working hours of employees: <input id = 'totalhours'/></p>");
-document.write("<button type='submnit' onclick='overtime()'>Calculate</button>");
 document.write("<p id='overt'></p>");
+document.write("<button type='submnit' onclick='overtime()'>Calculate</button>");
 var OverTimePay;
 function overtime(){
     var totalhours=document.getElementById("totalhours").value;
@@ -301,3 +301,15 @@ function overtime(){
 }
 
 document.write("<h3>Question10</h3>");
+document.write("<p> find the total number of currency notes of each denomination the cashier will have to give to the withdrawer</p>");
+document.write("<p>Enter Amount: <input id = 'amount'/></p>");
+document.write("<p id='notes'></p>");
+document.write("<button type='submnit' onclick='currencyNotes()'>Find</button>");
+function currencyNotes(){
+    var amount=document.getElementById("amount").value;
+    hundredRupeesNotes = Math.floor(amount / 100);
+    fiftyRupeesNotes = Math.floor((amount % 100) / 50);
+    tenRupeesNotes = Math.floor(((amount % 100) % 50) / 10);
+    remainingAmount = (((amount % 100) % 50) % 10);
+    document.getElementById("notes").innerHTML = hundredRupeesNotes + " hundred rupees notes, " + fiftyRupeesNotes + " fifty rupees notes, " + tenRupeesNotes + " ten rupees notes and remaining amount is " + remainingAmount;
+}
