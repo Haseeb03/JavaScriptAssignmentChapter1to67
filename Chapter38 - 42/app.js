@@ -144,86 +144,111 @@ function Occurrences() {
     var str = document.getElementById("countvowels").value;
     for(var i=0;i<str.length;i++){
         // document.write("<p>" + typeof(str.charAt(i) + str.charAt(i+1)) + "</p></br>");
-        var isvowel=(str.charAt(i) + str.charAt(i+1));
+        var isvowel=((str.charAt(i)).toLowerCase() + (str.charAt(i+1)).toLowerCase());
         switch(isvowel){
             case "aa":
                 count++;
                 vowels.push(isvowel);
+                break;
             case "ea":
                 count++;
                 vowels.push(isvowel);
+                break;
             case "ia":
                 count++;
                 vowels.push(isvowel);
+                break;
             case "oa":
                 count++;
                 vowels.push(isvowel);
+                break;
             case "ua":
                 count++;
                 vowels.push(isvowel);
+                break;
             case "ae":
                 count++;
                 vowels.push(isvowel);
+                break;
             case "ee":
                 count++;
                 vowels.push(isvowel);
+                break;
             case "ie":
                 count++;
                 vowels.push(isvowel);
+                break;
             case "oe":
                 count++;
                 vowels.push(isvowel);
+                break;
             case "ue":
                 count++;
                 vowels.push(isvowel);
+                break;
             case "ai":
                 count++;
                 vowels.push(isvowel);
+                break;
             case "ei":
                 count++;
                 vowels.push(isvowel);
+                break;
             case "ii":
                 count++;
                 vowels.push(isvowel);
+                break;
             case "oi":
                 count++;
                 vowels.push(isvowel);
+                break;
             case "ui":
                 count++;
                 vowels.push(isvowel);
+                break;
             case "ao":
                 count++;
                 vowels.push(isvowel);
+                break;
             case "eo":
                 count++;
                 vowels.push(isvowel);
+                break;
             case "io":
                 count++;
                 vowels.push(isvowel);
+                break;
             case "oo":
                 count++;
                 vowels.push(isvowel);
+                break;
             case "uo":
                 count++;
                 vowels.push(isvowel);
+                break;
             case "au":
                 count++;
                 vowels.push(isvowel);
+                break;
             case "eu":
                 count++;
                 vowels.push(isvowel);
+                break;
             case "iu":
                 count++;
                 vowels.push(isvowel);
+                break;
             case "ou":
                 count++;
                 vowels.push(isvowel);
+                break;
             case "uu":
                 count++;
                 vowels.push(isvowel);
+                break;
         }
     }
-    document.getElementById("TwoVowels").innerHTML ="Vowel Occurrence : " + count;
+    document.getElementById("TwoVowels").innerHTML ="Vowel Occurrence : " + count + " </br>" + vowels;
 }
 
 
