@@ -1,5 +1,5 @@
 document.write("<h3>Question1</h3>");
-// document.write("<p>Calculate Power</p>");
+document.write("<p>Show an alert Box</p>");
 // document.write("<input id='base' placeholder='Base value'>");
 // document.write("<input id='power' placeholder='Exponent value'>");
 // document.write("<p id='result'></p>");
@@ -18,6 +18,7 @@ function Link() {
 
 
 document.write("<h3>Question2</h3>");
+document.write("<p>Show alert message on click</p>");
 document.write("<h4> Mobile Phone lookup </h4>");
 document.write("<div class='moblie'> <img src='images/m1.png' onclick='message()'> <p> Tecno Spark 4 </p> </div>");
 document.write("<div class='moblie'> <img src='images/m2.png' onclick='message()'> <p> Nokia 7.2 </p> </div>");
@@ -28,6 +29,7 @@ function message(){
 }
 
 document.write("<h3>Question3</h3>");
+document.write("<p>Delete entire row by clicking on delete button</p>");
 document.write("<table id='myTable'>");
 document.write("<tr><th> Index  </th><th> Name </th><th> Class </th> </tr>");
 document.write("<tr><td>0</td><td>Jhone</td><td> 10 </td><td><input type = 'button' value = 'Delete' onclick = 'deleteRow()' /></td></tr>");
@@ -43,6 +45,7 @@ function deleteRow() {
 
 
 document.write("<h3>Question4</h3>");
+document.write("<p>Change the picture on mouseover and set the first picture on mouseout</p>");
 document.write("<img src='images/m3.png' onmouseover='rollover(this)' onmouseout='mouseaway(this)' />");
 function rollover(my_image){
     my_image.src = 'images/m2.png';
@@ -53,4 +56,14 @@ function mouseaway(my_image){
 
 
 document.write("<h3>Question5</h3>");
-
+document.write("<p>Increase and Decrease counter</p>");
+document.write('<div class = "inc"><button type = "button" onClick = "increase()"> increase </button><span id = "counter">0</span><button type = "button" onClick = "decrease()">decrease</button> </div> ');
+var clicks = 0;
+function increase() {
+    clicks = clicks  + 1;
+    document.getElementById("counter").innerHTML = clicks;
+}
+function decrease() {
+    clicks = clicks - 1;
+    document.getElementById("counter").innerHTML = clicks;		
+}
