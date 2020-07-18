@@ -1,16 +1,5 @@
 document.write("<h3>Question1</h3>");
 document.write("<p>Show an alert Box</p>");
-// document.write("<input id='base' placeholder='Base value'>");
-// document.write("<input id='power' placeholder='Exponent value'>");
-// document.write("<p id='result'></p>");
-// document.write("<button type='submit' onclick='CalculatePower()'>Calculate</button>");
-// function CalculatePower() {
-//     var b = document.getElementById("base").value;
-//     var p = document.getElementById("power").value;
-//     var result;
-//     result = Power(b, p);
-//     document.getElementById("result").innerHTML = b + " power " +p+ " = " + result;
-// }
 document.write("<a href='#' onclick='Link()'> Please click this link </a>");
 function Link() {
     alert("Thank you for clicking");
@@ -20,10 +9,10 @@ function Link() {
 document.write("<h3>Question2</h3>");
 document.write("<p>Show alert message on click</p>");
 document.write("<h4> Mobile Phone lookup </h4>");
-document.write("<div class='moblie'> <img src='images/m1.png' onclick='message()'> <p> Tecno Spark 4 </p> </div>");
+document.write("<center><div class='moblie'> <img src='images/m1.png' onclick='message()'> <p> Tecno Spark 4 </p> </div>");
 document.write("<div class='moblie'> <img src='images/m2.png' onclick='message()'> <p> Nokia 7.2 </p> </div>");
 document.write("<div class='moblie'> <img src='images/m3.png' onclick='message()'> <p> Samsumg Galaxy Note 10 </p> </div>");
-document.write("<div class='moblie'> <img src='images/m4.png' onclick='message()'> <p> Huawei Honor 9N </p> </div>");
+document.write("<div class='moblie'> <img src='images/m4.png' onclick='message()'> <p> Huawei Honor 9N </p> </div></center>");
 function message(){
     alert('Thanks for purchasing a phone from us');
 }
@@ -57,7 +46,7 @@ function mouseaway(my_image){
 
 document.write("<h3>Question5</h3>");
 document.write("<p>Increase and Decrease counter</p>");
-document.write('<div class = "inc"><button type = "button" onClick = "increase()"> increase </button><span id = "counter">0</span><button type = "button" onClick = "decrease()">decrease</button> </div> ');
+document.write("<button type = 'button' onClick = 'increase()'> increase </button><span id = 'counter'>0</span><button type = 'button' onClick = 'decrease()'>decrease</button>");
 var clicks = 0;
 function increase() {
     clicks = clicks  + 1;
