@@ -133,6 +133,28 @@ function removeVowels() {
 
 
 document.write("<h3>Question7</h3>");
+document.write("<p>count number of occurences of any two vowels</p>");
+document.write("<p>Write a sentence to count number of occurences of any two vowels: <input id = 'countvowels'/></p>");
+document.write("<button type='submit' onclick='Occurrences()'>Find</button>");
+document.write("<p id='TwoVowels'></p>");
+var count = 0;
+function Occurrences() {
+    var str = document.getElementById("countvowels").value;
+    // let VowelFound = false;
+    for(var i=0;i<str.length;i++){
+        switch(str.charAt(i) + str.charAt(i+1)){
+            case 'aa' || 'ae' || 'ai' || 'ao' || 'au' || 'ea' || 'ee' || 'ei' || 'eo' || 'eu' || 'ia' || 'ie' || 'ii' || 'io' || 'iu' || 'oa' || 'oe' || 'oi' || 'oo' || 'ou' || 'ua' || 'ue' || 'ui' || 'uo' || 'uu':
+                // document.write("<p>" + str.charAt(i) + str.charAt(i+1) + "</p></br>");
+                count=count+1;
+                // break;
+            default:
+                count = "Not found";
+            }
+            
+        }
+    document.getElementById("TwoVowels").innerHTML ="Vowel Occurrence : " + count;
+}
+
 
 document.write("<h3>Question8</h3>");
 
