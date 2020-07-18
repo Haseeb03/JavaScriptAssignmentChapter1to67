@@ -9,10 +9,10 @@ function Link() {
 document.write("<h3>Question2</h3>");
 document.write("<p>Show alert message on click</p>");
 document.write("<h4> Mobile Phone lookup </h4>");
-document.write("<center><div class='moblie'> <img src='images/m1.png' onclick='message()'> <p> Tecno Spark 4 </p> </div>");
+document.write("<div class='moblie'> <img src='images/m1.png' onclick='message()'> <p> Tecno Spark 4 </p> </div>");
 document.write("<div class='moblie'> <img src='images/m2.png' onclick='message()'> <p> Nokia 7.2 </p> </div>");
 document.write("<div class='moblie'> <img src='images/m3.png' onclick='message()'> <p> Samsumg Galaxy Note 10 </p> </div>");
-document.write("<div class='moblie'> <img src='images/m4.png' onclick='message()'> <p> Huawei Honor 9N </p> </div></center>");
+document.write("<div class='moblie'> <img src='images/m4.png' onclick='message()'> <p> Huawei Honor 9N </p> </div>");
 function message(){
     alert('Thanks for purchasing a phone from us');
 }
