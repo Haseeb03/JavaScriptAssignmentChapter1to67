@@ -19,38 +19,31 @@ function fullParagraph() {
 
 
 document.write("<h3>Question3</h3>");
-// document.write("<p>Create a form for student details and show student detail in table, each row of table must contain delete and edit button</p>");
-// function createForm() {
-//     document.write(`<form action="#" onsubmit="Form()" id="form">
-//     <input id="name" type="text" placeholder="Name">
-//     <input id="class" type="text" placeholder="Class">
-//     <input id="rollNumber" type="text" placeholder="Roll Number">
-//     <input type="submit" value="Submit" >
-//     </form><div id="divF"></div>`);
-// }
-// function Form() {
-//     var name = document.getElementById('name').value;
-//     var classN = document.getElementById('class').value;
-//     var rollNumber = document.getElementById('rollNumber').value;
-//     // var div = document.getElementById('divF');
-//     // var table = document.getElementById('table');
-//     // var form = document.getElementById('form');
-//     var row = (`<tr id='${rollNumber}'><td>${name}</td><td>${classN}</td><td>${rollNumber}</td><td><button onclick='deleteRow(${rollNumber})'>Delete</button></td><td><button onclick='EditRow(${rollNumber})'>Edit</button></td></tr>`);
-//     table.insertAdjacentHTML('beforeend', row)
-//     form.reset();
-//     // document.write(`name: ${name}, username: ${username}, password: ${password}`);
-// }
-// function writeHtml() {
-//     document.write(`<table><thead><tr><th>Name</th><th>Class</th><th>Roll Number</th><th>Action</th></tr></thead><tbody id='table'></tbody></table>`);
-// }
-// function deleteRow(i) {
-//     var row = document.getElementById(i);
-//     row.parentNode.removeChild(row);
-// }
-// function EditRow(i) {
-//     var roww = document.getElementById(i);
-//     document.write(roww.parentNode.childNodes(roww));
-//     // document.getElementById(i).parentNode.removeChild(row)
-// }
-// createForm();
-// writeHtml();
+document.write("<p>Create a form for student details and show student detail in table, each row of table must contain delete and edit button</p>");
+function createForm() {
+    document.write("<form action = '#' onsubmit = 'Form()' id = 'form'><input id = 'name' type = 'text' placeholder = 'Name'><input id = 'class' type = 'text' placeholder = 'Class'><input id = 'rollNumber' type = 'text' placeholder = 'Roll Number'><input type = 'submit' value = 'Submit' ></form>");
+}
+function Form() {
+    var name = document.getElementById('name').value;
+    var classN = document.getElementById('class').value;
+    var rollNumber = document.getElementById('rollNumber').value;
+    var row = (`<tr id='${rollNumber}'><td>${name}</td><td>${classN}</td><td>${rollNumber}</td><td><button onclick='deleteRow(${rollNumber})'>Delete</button></td><td><button onclick='EditRow(${rollNumber})'>Edit</button></td></tr>`);
+    table.insertAdjacentHTML('beforeend', row)
+    form.reset();
+}
+function Html() {
+    document.write(`<table><thead><tr><th>Name</th><th>Class</th><th>Roll Number</th><th>Action</th></tr></thead><tbody id='table'></tbody></table>`);
+}
+function deleteRow(i) {
+    var row = document.getElementById(i);
+    row.parentNode.removeChild(row);
+}
+
+function EditRow(i) {
+    // var roww = document.getElementById(i);
+    // var x = document.getElementById(i).parentNode.nodeType;
+    // document.getElementById("demo").innerHTML = x;
+}
+createForm();
+Html();
+// document.write('<p id="demo"></p>');
