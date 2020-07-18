@@ -143,7 +143,6 @@ function Occurrences() {
     count = 0;
     var str = document.getElementById("countvowels").value;
     for(var i=0;i<str.length;i++){
-        // document.write("<p>" + typeof(str.charAt(i) + str.charAt(i+1)) + "</p></br>");
         var isvowel=((str.charAt(i)).toLowerCase() + (str.charAt(i+1)).toLowerCase());
         switch(isvowel){
             case "aa":
@@ -253,7 +252,41 @@ function Occurrences() {
 
 
 document.write("<h3>Question8</h3>");
+document.write("<p>Convert km distance in  meters, feet, inches and centimeters</p>");
+document.write("<p>Enter distance in km: <input id = 'distance'/></p>");
+document.write("<button type='submit' onclick='mainfunction()'>Find</button>");
+document.write("<p id='m'></p>");
+document.write("<p id='f'></p>");
+document.write("<p id='i'></p>");
+document.write("<p id='cm'></p>");
+function mainfunction(){
+    var distance = document.getElementById("distance").value;
+    document.getElementById("m").innerHTML = distance + "km = " + meter(distance) + " meters";
+    document.getElementById("f").innerHTML = distance + "km = " + feet(distance) + " feets";
+    document.getElementById("i").innerHTML = distance + "km = " + inch(distance) + " inches";
+    document.getElementById("cm").innerHTML = distance + "km = " + centimeter(distance) + " centimeter";
+    
+}
+function meter(m){
+    var distanceInMeter = m * 1000;
+    return distanceInMeter;
+}
+function feet(f){
+    var distanceInFeet = f * 3280.84;
+    return distanceInFeet;
+}
+function inch(i){
+    var distanceInInch = i * 39370.1;
+    return distanceInInch;
+}
+function centimeter(cm){
+    var distanceInCentimeter = cm * 100000;
+    return distanceInCentimeter;
+}
+
 
 document.write("<h3>Question9</h3>");
+
+
 
 document.write("<h3>Question10</h3>");
