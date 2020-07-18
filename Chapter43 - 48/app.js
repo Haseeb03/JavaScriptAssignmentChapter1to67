@@ -29,21 +29,28 @@ function message(){
 
 document.write("<h3>Question3</h3>");
 document.write("<table id='myTable'>");
-document.write("<tr><th> index  </th><th> name </th><th> class </th> </tr>");
+document.write("<tr><th> Index  </th><th> Name </th><th> Class </th> </tr>");
 document.write("<tr><td>0</td><td>Jhone</td><td> 10 </td><td><input type = 'button' value = 'Delete' onclick = 'deleteRow()' /></td></tr>");
 document.write("<tr><td>1</td><td> Doe </td><td>  9 </td><td><input type = 'button' value = 'Delete' onclick = 'deleteRow()' /></td></tr>");
 document.write("<tr><td>2</td><td>Mark </td><td> 10 </td><td><input type = 'button' value = 'Delete' onclick = 'deleteRow()' /></td></tr>");
 document.write("<tr><td>3</td><td>James</td><td>  8 </td><td><input type = 'button' value = 'Delete' onclick = 'deleteRow()' /></td></tr>");
 document.write("</table>");
 function deleteRow() {
-	var tabledata = event.target.parentNode;	 
-	var tablerow = tabledata.parentNode; 	
+    var tabledata = event.target.parentNode;
+    var tablerow = tabledata.parentNode;
 	tablerow.parentNode.removeChild(tablerow);
 }
 
 
 document.write("<h3>Question4</h3>");
-
+document.write("<img src='images/m3.png' onmouseover='rollover(this)' onmouseout='mouseaway(this)' />");
+function rollover(my_image){
+    my_image.src = 'images/m2.png';
+}
+function mouseaway(my_image){
+    my_image.src = "images/m3.png";
+}
 
 
 document.write("<h3>Question5</h3>");
+
