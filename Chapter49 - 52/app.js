@@ -7,20 +7,16 @@ function showData() {
 	document.getElementById('displayPwd').innerHTML = document.getElementById("pwd").value;
 			
 }
-// document.write("<input id='base' placeholder='Base value'>");
-// document.write("<input id='power' placeholder='Exponent value'>");
-// document.write("<p id='result'></p>");
-// document.write("<button type='submit' onclick='CalculatePower()'>Calculate</button>");
-// function CalculatePower() {
-//     var b = document.getElementById("base").value;
-//     var p = document.getElementById("power").value;
-//     var result;
-//     result = Power(b, p);
-//     document.getElementById("result").innerHTML = b + " power " +p+ " = " + result;
-// }
 
 
 document.write("<h3>Question2</h3>");
+document.write("<p>Display full text when click on read more</p>");
+<div>
+      <p id="expandThePara">
+         Slow lorises are a group of several species of strepsirrhine primates which make up the genus Nycticebus.
+         <a href="javascript:void(0);" onClick="expandLoris();"><em>Click for more.</em></a>
+      </p> 
+     </div>
 
 
 document.write("<h3>Question3</h3>");
