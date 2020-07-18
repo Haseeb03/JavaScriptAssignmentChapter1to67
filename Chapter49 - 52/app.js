@@ -13,9 +13,44 @@ document.write("<h3>Question2</h3>");
 document.write("<p>Display full text when click on read more</p>");
 document.write("<p id='paragraph'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <a onClick='fullParagraph();'> <small>Click for more...</small> </a> </p>");
 function fullParagraph() {
-    var expandedParagraph = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
-    document.getElementById("paragraph").innerHTML = expandedParagraph;
+    var completeParagraph = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
+    document.getElementById("paragraph").innerHTML = completeParagraph;
 }
 
 
 document.write("<h3>Question3</h3>");
+// document.write("<p>Create a form for student details and show student detail in table, each row of table must contain delete and edit button</p>");
+// function createForm() {
+//     document.write(`<form action="#" onsubmit="Form()" id="form">
+//     <input id="name" type="text" placeholder="Name">
+//     <input id="class" type="text" placeholder="Class">
+//     <input id="rollNumber" type="text" placeholder="Roll Number">
+//     <input type="submit" value="Submit" >
+//     </form><div id="divF"></div>`);
+// }
+// function Form() {
+//     var name = document.getElementById('name').value;
+//     var classN = document.getElementById('class').value;
+//     var rollNumber = document.getElementById('rollNumber').value;
+//     // var div = document.getElementById('divF');
+//     // var table = document.getElementById('table');
+//     // var form = document.getElementById('form');
+//     var row = (`<tr id='${rollNumber}'><td>${name}</td><td>${classN}</td><td>${rollNumber}</td><td><button onclick='deleteRow(${rollNumber})'>Delete</button></td><td><button onclick='EditRow(${rollNumber})'>Edit</button></td></tr>`);
+//     table.insertAdjacentHTML('beforeend', row)
+//     form.reset();
+//     // document.write(`name: ${name}, username: ${username}, password: ${password}`);
+// }
+// function writeHtml() {
+//     document.write(`<table><thead><tr><th>Name</th><th>Class</th><th>Roll Number</th><th>Action</th></tr></thead><tbody id='table'></tbody></table>`);
+// }
+// function deleteRow(i) {
+//     var row = document.getElementById(i);
+//     row.parentNode.removeChild(row);
+// }
+// function EditRow(i) {
+//     var roww = document.getElementById(i);
+//     document.write(roww.parentNode.childNodes(roww));
+//     // document.getElementById(i).parentNode.removeChild(row)
+// }
+// createForm();
+// writeHtml();
