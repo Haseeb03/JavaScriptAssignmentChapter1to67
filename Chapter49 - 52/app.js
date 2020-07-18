@@ -11,12 +11,11 @@ function showData() {
 
 document.write("<h3>Question2</h3>");
 document.write("<p>Display full text when click on read more</p>");
-<div>
-      <p id="expandThePara">
-         Slow lorises are a group of several species of strepsirrhine primates which make up the genus Nycticebus.
-         <a href="javascript:void(0);" onClick="expandLoris();"><em>Click for more.</em></a>
-      </p> 
-     </div>
+document.write("<p id='paragraph'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <a onClick='fullParagraph();'> <small>Click for more...</small> </a> </p>");
+function fullParagraph() {
+    var expandedParagraph = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
+    document.getElementById("paragraph").innerHTML = expandedParagraph;
+}
 
 
 document.write("<h3>Question3</h3>");
