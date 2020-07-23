@@ -15,8 +15,15 @@ span.onclick = function() {
 
 //Q2 js
 function zoomOut(){
-
+  var paragraph=document.getElementById("paragraph");
+  var style = window.getComputedStyle(paragraph, null).getPropertyValue('font-size');
+  var fontSize = parseFloat(style); 
+  paragraph.style.fontSize = (fontSize - 10) + 'px';
 }
 function zoomIn(){
-  
+  var paragraph=document.getElementById("paragraph");
+  // paragraph.style.fontSize = "20px";
+  var style = window.getComputedStyle(paragraph, null).getPropertyValue('font-size');
+  var fontSize = parseFloat(style); 
+  paragraph.style.fontSize = (fontSize + 10) + 'px';
 }
