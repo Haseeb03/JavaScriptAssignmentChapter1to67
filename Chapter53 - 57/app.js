@@ -1,11 +1,7 @@
-document.write("<h3>Question1</h3>");
+//Q1 js
 var modal = document.getElementById("myModal");
 var img = document.getElementById("myImg");
-var img = document.getElementById("myImg1");
-var img = document.getElementById("myImg2");
-var img = document.getElementById("myImg3");
 var modalImg = document.getElementById("img");
-// var captionText = document.getElementById("caption");
 img.onclick = function(){
   modal.style.display = "block";
   modalImg.src = this.src;
@@ -17,5 +13,10 @@ span.onclick = function() {
 }
 
 
-document.write("<h3>Question2</h3>");
+//Q2 js
+function zoomOut(){
 
+}
+function zoomIn(){
+  
+}
